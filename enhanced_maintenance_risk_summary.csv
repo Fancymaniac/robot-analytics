@@ -1,0 +1,5 @@
+facility_name,model_type,robots_flagged,total_robots,percent_flagged
+London Facility,Painting,2,10,20.0
+London Facility,Welding,5,11,45.45454545454545
+Toronto Facility,Painting,4,9,44.44444444444444
+Toronto Facility,Welding,2,12,16.666666666666664
