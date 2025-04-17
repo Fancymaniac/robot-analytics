@@ -66,12 +66,11 @@ The notebook [`DB_RoboticsMLModel.ipynb`](./DB_RoboticsMLModel.ipynb) demonstrat
 ## Repository Structure
 
 ```
-.
-├── streamlit_app.py               # Main Streamlit dashboard
-├── DB_RoboticsMLModel.ipynb       # ML model for robot performance
-├── RobotAnalytics.sql             # Database schema & sample data
-├── requirements.txt               # Python dependencies
-├── README.md                      # Project documentation
+├── DB_WebPage.py                 # Streamlit dashboard for visualizing robot metrics
+├── DB_RoboticsMLModel.ipynb      # Jupyter notebook for predictive maintenance using ML
+├── Sql_Export/                   # SQL files for setting up the database schema
+│   ├── robotanalytics_*.sql      # Individual SQL schema files (alerts, events, robots, etc.)
+└── README.md                     # You're here!
 ```
 
 ## 👨‍💻 Contributors
