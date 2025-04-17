@@ -211,4 +211,3 @@ elif page == "Maintenance & Events":
     perf_full["month"] = pd.to_datetime(perf_full["timestamp"]).dt.to_period("M").astype(str)
     fig_box = px.box(perf_full, x="month", y="efficiency", points="all", title="Efficiency Distribution by Month",
                      color_discrete_sequence=["#1f77b4"])
-    st.plotly_chart(fig_box, use_container_width=True)
