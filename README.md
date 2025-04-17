@@ -1,71 +1,13 @@
+```markdown
+#  DB-Driven Analytic Systems for Industrial Robots
 
-# Database-Driven Analytics System for Industrial Robots
+This project presents a comprehensive, database-driven analytics system designed to monitor, analyze, and optimize the performance of industrial robotic arms across multiple facilities.
 
-This repository contains the **Database-Driven Analytics System for Industrial Robots**, a complete solution designed and implemented for the ECE 9014 graduate course project.
+---
 
-## Project Overview
+##  Project Structure
 
-This project features a real-time analytics dashboard built on top of a normalized **MySQL relational database** designed to monitor and evaluate industrial robot performance. The database includes 11 interconnected tables covering:
-
-- Facilities
-- Robot Models
-- Robots
-- Sensors
-- Performance Metrics
-- Event Logs
-- Event Types
-- Operators
-- Operation Logs
-- Alert Configurations (optional)
-- Machine Learning Models
-
-All tables follow 3NF normalization, ensuring consistency, minimal redundancy, and easy scalability.
-
-## Dashboard Features (Built with Streamlit + Plotly)
-
-The analytics dashboard is structured into four main pages:
-
-### 1. Overview
-- Robot distribution across facilities
-- Facility-wise installation metrics
-
-### 2. Facility Overview
-- Robot status (Active, Maintenance, Offline)
-- Distribution by model categories
-- Installation timelines
-
-### 3. Performance Metrics
-- Monthly efficiency/cycle time/energy analysis via box plots
-- Metric density over time using scatter plots
-- Robot vs Month bubble chart
-- Top-5 performing robots (line chart)
-
-### 4. Maintenance & Events
-- High energy consumption cycles
-- Efficiency heatmaps (robot vs date)
-- Event count breakdowns by severity
-- Efficiency level stack plots
-
-## Machine Learning Integration
-
-The notebook [`DB_RoboticsMLModel.ipynb`](./DB_RoboticsMLModel.ipynb) demonstrates how performance data from the SQL database can be used to build machine learning models. It includes:
-
-- Data extraction using SQLAlchemy
-- Feature engineering
-- Model training (e.g., Linear Regression)
-- Performance metrics (RMSE, MAE)
-- Baseline setup for predictive maintenance tasks
-
-## Technologies Used
-
-- **Frontend:** Streamlit, Plotly
-- **Backend:** MySQL, SQLAlchemy
-- **ML & Data:** Pandas, scikit-learn, NumPy
-- **Database Tools:** MySQL Workbench, ERD Modeling
-
-## Repository Structure
-
-```
+```bash
 ├── DB_WebPage.py                 # Streamlit dashboard for visualizing robot metrics
 ├── DB_RoboticsMLModel.ipynb      # Jupyter notebook for predictive maintenance using ML
 ├── Sql_Export/                   # SQL files for setting up the database schema
@@ -73,8 +15,62 @@ The notebook [`DB_RoboticsMLModel.ipynb`](./DB_RoboticsMLModel.ipynb) demonstrat
 └── README.md                     # You're here!
 ```
 
-## 👨‍💻 Contributors
+---
 
-- **Boyang Wang**
-- **Haresh Sivakumar**
-- **Sannjay Balaji**
+## Features
+
+-  **Normalized SQL schema (3NF)** for efficient data storage and analysis
+-  **Streamlit-based web dashboard** to explore robot performance and events
+-  **Machine Learning model** (Random Forest) for predicting robot maintenance risk
+-  Real-time integration with MySQL backend
+-  Modular file structure for deployment and testing
+
+---
+
+##  How to Run
+
+1. **Set up MySQL Database**  
+   - Execute all `.sql` files from the `Sql_Export/` folder in your MySQL server.
+
+2. **Run the Web Dashboard**
+   ```bash
+   streamlit run DB_WebPage.py
+   ```
+
+3. **Explore ML Predictions**
+   - Open `DB_RoboticsMLModel.ipynb` in Jupyter Notebook or VS Code
+   - Follow the notebook to retrain or test the Random Forest model
+
+---
+
+## Requirements
+
+Install dependencies using:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## Sample Dashboards
+
+The dashboard displays:
+- Efficiency, energy, and cycle time analytics
+- Facility-wise robot deployment
+- Maintenance history and fault trends
+
+---
+
+## Authors
+
+- **Boyang Wang** – Streamlit & visualization
+- **Haresh Sivakumar** – SQL schema design & integration
+- **Sannjay Balaji** – Machine Learning & predictive modeling
+
+---
+
+## License
+
+This project is for academic use only. Licensing can be added if extended for public or industrial deployment.
+```
